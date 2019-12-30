@@ -1,20 +1,21 @@
 # ReactJS-Study
+
 ReactJS를 공부하는 레포지토리 입니다.
 
 ---
 
 # Week1
 
-* create-react-app을 이용하여 Project를 생성
+- create-react-app을 이용하여 Project를 생성
 
-* ``` shell
+```shell
   npm install -g create-react-app
   create-react-app todo
-  ```
+```
 
-* Todo App 작성
+- Todo App 작성
 
-* ``` jsx
+```jsx
   ...
   return (
     <div className="App">
@@ -27,11 +28,11 @@ ReactJS를 공부하는 레포지토리 입니다.
     </div>
   );
   ...
-  ```
+```
 
-* development server port 설정(package.json)
+- development server port 설정(package.json)
 
-* ``` javascript
+```javascript
   {
     ...,
     "scripts": {
@@ -39,4 +40,4 @@ ReactJS를 공부하는 레포지토리 입니다.
         ...
     }
   }
-  ```
+```
