@@ -1,0 +1,53 @@
+body{
+    background-color: #1E1F22;
+    color: lightgrey;
+}
+.todayDate{
+    display: inline-block;
+    font-size: 40px;
+    left: 13%;
+
+}
+
+.calenderTitle{
+    float: right;
+    
+    .arr_btn, .today{
+        background-color: #565759;
+        color: lightgrey;
+        font-size: 30px;
+        border-radius: 8px;
+    }
+    .today{
+        padding: 0px 15px;
+        margin: 0px 10px;
+        height: 40px;
+        width: 85px;
+    }
+    .arr_btn{
+        padding: 0px 8px;
+        height: 40px;
+        width: 40px;
+    }
+}
+
+// calender detail
+th{
+    font-size: 30px;
+    width: 200px;
+    text-align: right;
+}
+td{
+    border: 1px solid lightgrey;
+    font-size: 25px;
+    height: 150px;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+
+.calenderDetail{
+    position: absolute;
+    left: 13%;
+}
