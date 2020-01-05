@@ -86,10 +86,10 @@ const App = () => {
 
   return (
     <div className="left-side-menu" style={leftSideMenuStyle}>
-      <div className="user-info" style={userInfoStyle}>
+      {/* <div className="user-info" style={userInfoStyle}>
         <button style={userInfoButtonStyle}>로그인</button>
-      </div>
-      <BoardList groupList={groupList} selectedNo={queries.boardNo}></BoardList>
+      </div> */}
+      <BoardList groupList={groupList}></BoardList>
     </div>
   );
 };
