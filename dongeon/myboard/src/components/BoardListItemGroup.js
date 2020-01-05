@@ -4,10 +4,14 @@ import BoardListItem from "./BoardListItemGroupItem";
 class BoardListItemGroup extends Component {
   render() {
     const { boardList, groupName } = this.props;
-    const boardListItems = boardList.map(board => {
+    const boardListItems = boardList.map((board, index) => {
       const { boardName, boardNo } = board;
       return (
-        <BoardListItem boardName={boardName} boardNo={boardNo}></BoardListItem>
+        <BoardListItem
+          key={index}
+          boardName={boardName}
+          boardNo={boardNo}
+        ></BoardListItem>
       );
     });
     return (

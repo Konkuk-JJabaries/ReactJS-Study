@@ -2,8 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import BoardList from "./components/BoardList";
+import queryString from "query-string";
+const App = () => {
+  const queries = queryString.parse(document.location.search);
 
-function App() {
   const groupList = [
     {
       groupName: "홈",
@@ -36,27 +38,27 @@ function App() {
       boardList: [
         {
           boardName: "자유",
-          boardNo: "1"
+          boardNo: "4"
         },
         {
           boardName: "유머",
-          boardNo: "2"
+          boardNo: "5"
         },
         {
           boardName: "영상",
-          boardNo: "3"
+          boardNo: "6"
         },
         {
           boardName: "유저 찾기",
-          boardNo: "3"
+          boardNo: "7"
         },
         {
           boardName: "사건 사고",
-          boardNo: "3"
+          boardNo: "8"
         },
         {
           boardName: "팬 아트",
-          boardNo: "3"
+          boardNo: "9"
         }
       ]
     }
@@ -87,9 +89,9 @@ function App() {
       <div className="user-info" style={userInfoStyle}>
         <button style={userInfoButtonStyle}>로그인</button>
       </div>
-      <BoardList groupList={groupList}></BoardList>
+      <BoardList groupList={groupList} selectedNo={queries.boardNo}></BoardList>
     </div>
   );
-}
+};
 
 export default App;
