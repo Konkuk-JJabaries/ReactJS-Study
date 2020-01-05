@@ -16,4 +16,4 @@
 
 ### 결과
 
-<img src="git/example.png" alt="실습 결과" style="zoom:33%;" />
+<img src="git/example.png" alt="실습 결과" style="width:33%; height:33%;" />
