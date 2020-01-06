@@ -1,0 +1,40 @@
+.board-list {
+    .board-list-group {
+        border-top: 1px solid #ebeef1;
+        padding: 10px;
+        &:first-child {
+            border: none;
+        }
+        .board-list-group-name{
+            font-size: 12px;
+            color: #7b858e;
+            padding-bottom: 8px;
+        }
+        .board-list-group-items{
+            .board-list-group-item{
+                margin-bottom: 1px;
+                &:last-chlid {
+                    margin: 0;
+                }
+                a {
+                    padding: 8px 12px 7px;
+                    font-size: 14px;
+                    color: #1e2022;
+                   
+                    border-radius: 5px;
+                    display: block;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: #f8f9fa;
+                    }
+
+                }
+             &.selected a{
+                    color: #16ae81;
+                    background: #f8f9fa;
+                }
+            }
+        }
+    }
+}
