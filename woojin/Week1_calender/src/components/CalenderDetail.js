@@ -1,14 +1,11 @@
+//file :: /src/components/CalenderDetail.js
 import React, { Component } from 'react';
 import CalenderDate from './CalenderDate'
-import "../App.scss"
 
 class CalenderDetail extends Component{
   
   render(){
-    let last = this.props.last;
-    let fstDate = this.props.fstDate;
-    let lstDay = this.props.lstDay;
-
+    const { last, fstDate, lstDay } = this.props;
     let tmpArr = []
     let tmpLine = 0
     let tmpDict = {}
@@ -16,7 +13,6 @@ class CalenderDetail extends Component{
     for(let i=0;i<6-fstDate;i++){
       tmpArr.push(0);
     }
-
     for(let j=1; j<last+1; j++){
       tmpLine = Math.floor(j/7);
       if(tmpArr.length === 7){
@@ -29,7 +25,13 @@ class CalenderDetail extends Component{
       tmpArr.push(i)
     }
     tmpDict[tmpLine] = {date: tmpArr}
-    console.log(tmpDict)
+
+    const calenderDate  = Object.values(tmpDict).map((t,k) => {
+      return (
+        <CalenderDate key={k} value={t}></CalenderDate>
+      )
+    });
+
     return (
       <div className="calenderDetail">
         <tr>
@@ -41,9 +43,7 @@ class CalenderDetail extends Component{
           <th>금</th>
           <th>토</th>
         </tr>
-        {Object.values(tmpDict).map((t,k) => (
-          <CalenderDate key={k} value={t}></CalenderDate>
-        ))}
+        { calenderDate }
       </div>
     );
   }

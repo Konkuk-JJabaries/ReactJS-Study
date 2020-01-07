@@ -1,3 +1,5 @@
+//file :: /src/App.js
+
 import React, { Component } from 'react';
 import CalenderDetail from './components/CalenderDetail'
 import CalenderTitle from './components/CalenderTitle'
@@ -14,12 +16,20 @@ class App extends Component{
 
   render(){
     //calendar 는 0월부터 시작
-    let today = this.date.getFullYear() + "년 " + (this.date.getMonth()+1)+"월";
-    let lastDay = this.lastDate.getDate();
+    const today = this.date.getFullYear() + "년 " + (this.date.getMonth()+1)+"월";
+    const lstDate = this.lastDate.getDate();
+    const fstDay = this.firstDate.getDay();
+    const lstDay = this.lastDate.getDay();
     return (
       <div className="App"> 
-        <CalenderTitle date = { today }></CalenderTitle>
-        <CalenderDetail last = { lastDay } fstDate = {this.firstDate.getDay()} lstDay = {this.lastDate.getDay()}></CalenderDetail>
+        <CalenderTitle 
+          date = { today }
+        ></CalenderTitle>
+        <CalenderDetail 
+          last = { lstDate } 
+          fstDate = { fstDay } 
+          lstDay = { lstDay }
+        ></CalenderDetail>
       </div>
     );
   }
