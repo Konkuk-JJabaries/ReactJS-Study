@@ -1,19 +1,20 @@
 import React, { Component } from "react";
-import BoardListItem from "./BoardListItemGroupItem";
+import BoardListGroupItem from "./BoardListGroupItem";
 
-class BoardListItemGroup extends Component {
+class BoardListGroup extends Component {
   render() {
     const { boardList, groupName } = this.props;
     const boardListItems = boardList.map((board, index) => {
       const { boardName, boardNo } = board;
       return (
-        <BoardListItem
+        <BoardListGroupItem
           key={index}
           boardName={boardName}
           boardNo={boardNo}
-        ></BoardListItem>
+        />
       );
     });
+
     return (
       <div className="board-list-group">
         <div className="board-list-group-name">{groupName}</div>
@@ -23,4 +24,4 @@ class BoardListItemGroup extends Component {
   }
 }
 
-export default BoardListItemGroup;
+export default BoardListGroup;

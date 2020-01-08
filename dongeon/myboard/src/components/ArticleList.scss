@@ -1,0 +1,92 @@
+.article-list {
+  background: white;
+  margin: 30px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  .article-list-item {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 1px solid #ebeef1;
+    &:last-child {
+      border: none;
+    }
+    .article-vote {
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13px;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url("https://talk.op.gg/images/icon-vote-up.png");
+      }
+    }
+    .article-content {
+      font-size: 14px;
+      flex: 1;
+      a {
+        text-decoration: none;
+        color: inherit;
+        line-height: 20px;
+        span {
+          margin-left: 5px;
+          color: #16ae81;
+        }
+      }
+      .article-info {
+        margin-top: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
+          color: #98a0a7;
+          margin-right: 10px;
+          &:not(:last-child):after {
+            content: "|";
+            color: #ebeef1;
+            margin-left: 10px;
+          }
+          .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+    .thumbnail {
+      img {
+        vertical-align: top;
+        width: 93px;
+        height: 50px;
+        object-fit: cover;
+      }
+    }
+
+    &.fixed {
+      background: #ecf8ff;
+      height: 30px;
+      .article-vote {
+        &:before {
+          display: none;
+        }
+      }
+      .article-content {
+        display: flex;
+        a {
+          flex: 1;
+          font-weight: 700;
+          color: #1ea1f7;
+        }
+        .article-info {
+          width: 220px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

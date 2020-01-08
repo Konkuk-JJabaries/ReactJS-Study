@@ -1,0 +1,49 @@
+body {
+  background: #1e1f22;
+  color: lightgrey;
+}
+
+.todayDate {
+  display: inline-block;
+  font-size: 40px;
+}
+
+.calendarTitle {
+  float: right;
+  .arr_btn,
+  .today {
+    background: #565759;
+    color: lightgrey;
+    font-size: 30px;
+    border-radius: 8px;
+  }
+  .today {
+    margin: 0 10px;
+    height: 40px;
+    width: 85px;
+  }
+  .arr_btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  th {
+    font-size: 30px;
+    width: 150px;
+    text-align: right;
+  }
+  td {
+    border: 1px solid lightgrey;
+    font-size: 15px;
+    min-width: 150px;
+    height: 120px;
+    text-align: right;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
