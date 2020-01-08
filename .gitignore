@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+.*
+=======
 .*
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -24,3 +27,4 @@ yarn-debug.log*
 yarn-error.log*
 
 
+>>>>>>> 1138b9ce2e99e4b01a02b0f1ce1e4715af48b2b1
