@@ -1,0 +1,51 @@
+body{
+    background-color: #1e1f22;
+    color: lightgray;
+}
+
+.todayDate{
+    display: inline-block;
+    font-size: 40px;
+}
+
+.calenderTitle{
+    float : right;
+    .arr_btn, .today{
+        background-color: #565759;
+        color: lightgrey;
+        font-size: 30px;
+        border-radius: 8px;
+    }
+    .today{
+        margin: 0px 10px;
+        height: 40px;
+        width: 85px;
+    }
+    .arr_btn{
+        height: 40px;
+        width: 40px;
+    }
+}
+th{
+    font-size: 30px;
+    width: 150px;
+    text-align: right;
+}
+td{
+    border: 1px solid lightgray;
+    font-size: 15px;
+    height: 120px;
+    text-align: right;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.calenderDetail{
+    margin: 0 auto;
+}
