@@ -1,0 +1,13 @@
+.wrapper {
+  margin: -60px auto;
+  position: relative;
+  width: 1060px;
+  .left-side-menu {
+    display: inline-block;
+  }
+  .content {
+    float: right;
+    width: 728px;
+    //   background-color: blue;
+  }
+}

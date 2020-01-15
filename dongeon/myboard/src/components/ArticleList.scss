@@ -1,7 +1,11 @@
 .article-list {
   background: white;
-  margin: 30px;
+  margin: 10px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  img {
+    width: 24px;
+    height: 24px;
+  }
   .article-list-item {
     display: flex;
     padding: 10px 0;
@@ -9,6 +13,9 @@
     border-bottom: 1px solid #ebeef1;
     &:last-child {
       border: none;
+    }
+    &:hover {
+      background-color: #f8f9fa;
     }
     .article-vote {
       width: 50px;
@@ -38,9 +45,9 @@
       }
       .article-info {
         margin-top: 5px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
         span {
           color: #98a0a7;
           margin-right: 10px;
@@ -59,6 +66,7 @@
       }
     }
     .thumbnail {
+      margin-right: 10px;
       img {
         vertical-align: top;
         width: 93px;

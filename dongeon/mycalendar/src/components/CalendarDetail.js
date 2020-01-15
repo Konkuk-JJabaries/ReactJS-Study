@@ -3,7 +3,17 @@ import CalendarDate from "./CalendarDate";
 
 class CalendarDetail extends Component {
   render() {
-    const { lstDate, fstDay, lstDay } = this.props;
+    const { dateValue } = this.props;
+    const year = dateValue.getFullYear();
+    const month = dateValue.getMonth();
+
+    const firstDate = new Date(year, month, 1);
+    const lastDate = new Date(year, month + 1, 0);
+
+    const fstDay = firstDate.getDay();
+    const lstDay = lastDate.getDay();
+    const lstDate = lastDate.getDate();
+
     let tempArr = [];
     let tempLine = 0;
     let tempDict = {};

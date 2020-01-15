@@ -24,11 +24,7 @@ class ArticleListItem extends Component {
           {!fixed ? (
             vote
           ) : (
-            <img
-              src="https://talk.op.gg/images/icon_notice@2x.png"
-              width="24px"
-              height="24px"
-            />
+            <img src="https://talk.op.gg/images/icon_notice@2x.png" alt="" />
           )}
         </div>
         <div className="article-content">
@@ -39,14 +35,14 @@ class ArticleListItem extends Component {
             <span className="board-name">{boardName}</span>
             <span className="time">{time}</span>
             <span className="nickname">
-              <img className="icon" width="24px" height="24px" src={icon} />
+              <img className="icon" alt="" src={icon} />
               {nickname}
             </span>
           </div>
         </div>
         {!fixed ? (
           <div className="thumbnail">
-            <img src={thumbnail} width="24px" height="24px" />
+            <img src={thumbnail} alt="" />
           </div>
         ) : null}
       </div>

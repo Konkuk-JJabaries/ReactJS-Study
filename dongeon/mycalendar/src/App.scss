@@ -1,4 +1,6 @@
 body {
+  width: 1064px;
+  margin: 20px auto;
   background: #1e1f22;
   color: lightgrey;
 }
@@ -29,6 +31,7 @@ body {
 }
 
 table {
+  margin-top: 30px;
   border-collapse: collapse;
   th {
     font-size: 30px;
@@ -45,5 +48,9 @@ table {
     padding-top: 5px;
     padding-right: 10px;
     box-sizing: border-box;
+    &:first-child,
+    &:last-child {
+      background: #2a292a;
+    }
   }
 }

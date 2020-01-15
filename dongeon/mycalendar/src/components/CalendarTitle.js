@@ -2,17 +2,24 @@ import React, { Component } from "react";
 
 class CalendarTitle extends Component {
   render() {
-    const { date } = this.props;
-    const { p, children } = this.props;
-    console.log(p);
-    console.log(children);
+    const { dateValue, moveNextMonth, moveBeforeMonth, moveToday } = this.props;
+    const year = dateValue.getFullYear();
+    const month = dateValue.getMonth();
     return (
       <>
-        <div className="todayDate">{date}</div>
+        <div className="todayDate">
+          {year}년 {month + 1}월
+        </div>
         <div className="calendarTitle">
-          <button className="arr_btn">&lt;</button>
-          <button className="today">오늘</button>
-          <button className="arr_btn">&gt;</button>
+          <button className="arr_btn" onClick={moveBeforeMonth}>
+            &lt;
+          </button>
+          <button className="today" onClick={moveToday}>
+            오늘
+          </button>
+          <button className="arr_btn" onClick={moveNextMonth}>
+            &gt;
+          </button>
         </div>
       </>
     );
