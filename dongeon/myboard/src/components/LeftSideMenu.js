@@ -9,7 +9,7 @@ class LeftSideMenu extends Component {
         boardList: [
           {
             boardName: "전체",
-            boardNo: "home"
+            boardNo: "notice"
           }
         ]
       },
@@ -35,15 +35,15 @@ class LeftSideMenu extends Component {
         boardList: [
           {
             boardName: "자유",
-            boardNo: "4"
+            boardNo: "1"
           },
           {
             boardName: "유머",
-            boardNo: "5"
+            boardNo: "2"
           },
           {
             boardName: "영상",
-            boardNo: "6"
+            boardNo: "3"
           },
           {
             boardName: "유저 찾기",

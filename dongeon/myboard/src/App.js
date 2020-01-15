@@ -1,67 +1,37 @@
-import React from "react";
-import "./App.css";
-import LeftSideMenu from "./components/LeftSideMenu";
+import React, { Component } from "react";
+import "./App.scss";
 import ArticleList from "./components/ArticleList";
-const App = () => {
-  const articleList = [
-    {
-      title: "안녕",
-      vote: 10,
-      boardName: "자유",
-      boardNo: "1",
-      articleNo: "1",
-      comments: 10,
-      time: "30 분 전",
-      nickname: "동언",
-      thumbnail: "",
-      icon: "https://talk.op.gg/images/tier/icon-level-admin.png",
-      fixed: true
-    },
-    {
-      title: "안녕2",
-      vote: 20,
-      boardName: "자유",
-      boardNo: "1",
-      articleNo: "1",
-      comments: 12,
-      time: "35 분 전",
-      nickname: "동언2",
-      icon: "https://talk.op.gg/images/tier/icon-level-admin.png",
-      thumbnail:
-        "https://opgg-com-image.akamaized.net/attach/images/20200103065555.932603.jpg?image=w_200"
-    },
-    {
-      title: "안녕3",
-      vote: 200,
-      boardName: "자유",
-      boardNo: "1",
-      articleNo: "1",
-      comments: 12,
-      time: "35 분 전",
-      nickname: "동언2",
-      icon: "https://talk.op.gg/images/tier/icon-level-admin.png",
-      thumbnail:
-        "https://opgg-com-image.akamaized.net/attach/images/20200103065555.932603.jpg?image=w_200"
-    }
-  ];
+import Wrapper from "./components/Wrapper";
+import MainContent from "./components/MainContent";
+import SubHeader from "./components/SubHeader";
+import LeftSideMenu from "./components/LeftSideMenu";
+class App extends Component {
+  state = {
+    boardNo: "notice"
+  };
+  render() {
+    setInterval(() => {
+      const { boardNo } = this.state;
+      const { hash } = document.location;
 
-  return (
-    // <div style={{ width: "300px" }}>
-    //   {/* <BoardListGroupItem boardName="게시판 이름" boardNo="test" /> */}
+      if (boardNo !== hash.substr(1))
+        this.setState({ boardNo: hash.substr(1) });
+      console.log(boardNo);
+    }, 300);
 
-    //   {/* <BoardListGroup
-    //     groupName={groupList[1].groupName}
-    //     boardList={groupList[1].boardList}
-    //   /> */}
-
-    //   <BoardList groupList={groupList} />
-    // </div>
-
-    <div style={{ width: "800px" }}>
-      {/* <LeftSideMenu /> */}
-      <ArticleList articleList={articleList} />
-    </div>
-  );
-};
+    return (
+      <>
+        <div className="background" />
+        <Wrapper>
+          <LeftSideMenu />
+          <MainContent>
+            <SubHeader />
+            <ArticleList boardNo={this.state.boardNo} />
+          </MainContent>
+        </Wrapper>
+      </>
+    );
+  }
+}
 
 export default App;
