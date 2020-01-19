@@ -1,0 +1,22 @@
+body{
+    background-color: #1e1f22;
+    color: lightgray;
+    width: 1064px;
+    margin: 20px auto;
+}
+.headerTitle{
+    display: inline-block;
+    font-size: 40px;
+}
+.headerButtonGroup{
+    float: right;
+    .headerButton .headerToday{
+        background-color: #565759;
+        color: lightgray;
+        font-size: 32px;
+        border-radius: 8px;
+    }
+}
+
+
+
